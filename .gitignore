@@ -6,6 +6,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
+
+# Build / Distribution
 build/
 develop-eggs/
 dist/
@@ -25,6 +27,8 @@ share/python-wheels/
 MANIFEST
 *.manifest
 *.spec
+
+# Logs / Coverage / Testing
 pip-log.txt
 pip-delete-this-directory.txt
 htmlcov/
@@ -32,7 +36,7 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
-.cache
+.cache/
 nosetests.xml
 coverage.xml
 *.cover
@@ -41,9 +45,13 @@ coverage.xml
 .pytest_cache/
 cover/
 *.log
+
+# Local configuration / databases
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# Type checking / Linters
 .mypy_cache/
 .dmypy.json
 dmypy.json
@@ -63,7 +71,7 @@ venv.bak/
 pythonenv*
 
 # ============================================
-# IDE
+# IDE / Editor
 # ============================================
 .vscode/
 .idea/
@@ -85,7 +93,7 @@ Thumbs.db
 *.code-workspace
 
 # ============================================
-# Environment
+# Environment / Secrets
 # ============================================
 .env
 .env.local
@@ -94,17 +102,21 @@ Thumbs.db
 .env.staging
 
 # ============================================
-# Data
+# Application Data
 # ============================================
 data/database/*.db
 data/database/*.db-shm
 data/database/*.db-wal
+
 data/vector_store/*
 data/uploads/*
+
 data/generated/images/*
 data/generated/charts/*
+
 data/logs/*.log
 data/logs/*.log.*
+
 data/cache/*
 data/sessions/*
 data/exports/*
@@ -114,13 +126,26 @@ data/backups/*
 !data/**/.gitkeep
 
 # ============================================
-# Models (large files)
+# AI / ML Models
 # ============================================
+
+# Local model directories
 models/
 ollama_models/
+hf_cache/
+
+# Large model files
 *.bin
 *.safetensors
 *.gguf
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Hugging Face cache
+huggingface/
+.huggingface/
 
 # ============================================
 # Jupyter
@@ -135,17 +160,27 @@ docker-compose.override.yml
 *.dockerignore
 
 # ============================================
-# Documentation
+# Documentation Build Output
 # ============================================
 docs/_build/
 docs/site/
 site/
 
 # ============================================
-# Secrets
+# Secrets / Certificates
 # ============================================
 *.pem
 *.key
 *.crt
 *.p12
+
 secrets/
+
+# ============================================
+# OS / Temporary Files
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo

@@ -1,0 +1,2 @@
+Migration versions directory.
+Alembic will generate migration files here.

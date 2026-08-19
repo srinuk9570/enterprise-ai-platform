@@ -1,0 +1,2 @@
+Database backups directory.
+Contains timestamped SQLite database backups.

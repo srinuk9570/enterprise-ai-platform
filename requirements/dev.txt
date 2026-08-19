@@ -1,0 +1,55 @@
+# Development dependencies
+# Install with: pip install -r requirements/dev.txt
+
+# Include base requirements
+-r base.txt
+
+# Testing
+pytest==7.4.4
+pytest-cov==4.1.0
+pytest-asyncio==0.23.3
+pytest-mock==3.12.0
+pytest-xdist==3.5.0
+factory-boy==3.3.0
+faker==22.2.0
+
+# Code Quality
+black==24.1.1
+ruff==0.1.14
+mypy==1.8.0
+isort==5.13.2
+flake8==7.0.0
+pylint==3.0.3
+bandit==1.7.6
+
+# Pre-commit hooks
+pre-commit==3.6.0
+
+# Development server
+watchdog==4.0.0
+python-dotenv==1.0.0
+
+# Debugging
+ipython==8.20.0
+ipdb==0.13.13
+pdbpp==0.10.3
+
+# Performance testing
+locust==2.20.1
+pytest-benchmark==4.0.0
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.5.3
+mkdocstrings[python]==0.24.0
+
+# Database tools
+sqlite-web==0.6.1
+
+# Profiling
+py-spy==0.3.14
+memory-profiler==0.61.0
+
+# API testing
+httpx==0.26.0
+websocket-client==1.7.0

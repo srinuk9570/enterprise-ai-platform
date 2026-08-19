@@ -1,0 +1,133 @@
+/* ============================================
+   Enterprise AI Platform - Light Theme
+   ============================================ */
+
+:root {
+    /* Primary Colors */
+    --primary: #0066cc;
+    --primary-dark: #004d99;
+    --primary-light: #3388dd;
+    --primary-glow: rgba(0, 102, 204, 0.15);
+    
+    /* Secondary Colors */
+    --secondary: #6c47ff;
+    --secondary-dark: #5835e6;
+    --secondary-light: #8a6bff;
+    
+    /* Accent Colors */
+    --accent-success: #10b981;
+    --accent-warning: #f59e0b;
+    --accent-error: #ef4444;
+    --accent-info: #3b82f6;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --bg-card: #ffffff;
+    --bg-sidebar: #f1f3f5;
+    --bg-input: #ffffff;
+    --bg-hover: #e9ecef;
+    
+    /* Border Colors */
+    --border-primary: #dee2e6;
+    --border-secondary: #e9ecef;
+    --border-light: #ced4da;
+    
+    /* Text Colors */
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-muted: #adb5bd;
+    --text-inverse: #ffffff;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 20px var(--primary-glow);
+}
+
+/* Light theme specific overrides */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+}
+
+h1 {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.stButton > button {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.stChatMessage[data-testid="chat-message-user"] {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+    border: 1px solid #90caf9 !important;
+}
+
+.stChatMessage[data-testid="chat-message-assistant"] {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+.stChatInput textarea {
+    background-color: var(--bg-input) !important;
+    border: 2px solid var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.stMetric {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.stMetric label {
+    color: var(--text-secondary) !important;
+}
+
+.stMetric [data-testid="metric-value"] {
+    color: var(--primary) !important;
+}
+
+/* Code blocks */
+code, pre {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+code {
+    color: var(--primary) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}

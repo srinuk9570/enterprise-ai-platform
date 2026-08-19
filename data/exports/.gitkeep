@@ -1,0 +1,4 @@
+Exports directory for user exported data.
+- csv/   : CSV exports
+- json/  : JSON exports
+- pdf/   : PDF exports

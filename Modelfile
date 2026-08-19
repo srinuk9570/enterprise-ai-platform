@@ -1,0 +1,4 @@
+FROM phi3:mini
+PARAMETER num_ctx 1024
+PARAMETER num_predict 256
+PARAMETER temperature 0.7

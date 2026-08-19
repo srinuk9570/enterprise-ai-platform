@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#1a1a2e" rx="8"/>
+  
+  <defs>
+    <linearGradient id="placeholderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d44"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="300" fill="url(#placeholderGrad)" rx="8"/>
+  
+  <!-- Image icon -->
+  <rect x="160" y="100" width="80" height="60" rx="4" fill="none" stroke="#3d3d5c" stroke-width="2"/>
+  <circle cx="200" cy="115" r="8" fill="#3d3d5c"/>
+  <path d="M165 155 L190 130 L215 150 L235 135 L240 155 Z" fill="#3d3d5c" opacity="0.5"/>
+  
+  <text x="200" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6b6b80">
+    No Image
+  </text>
+</svg>

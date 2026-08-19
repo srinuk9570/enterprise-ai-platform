@@ -1,0 +1,48 @@
+[Unit]
+Description=Enterprise AI Platform - Streamlit Frontend
+After=network.target backend.service
+Wants=backend.service
+
+[Service]
+Type=simple
+User=aiplatform
+Group=aiplatform
+WorkingDirectory=/opt/enterprise-ai-platform
+Environment="PATH=/opt/enterprise-ai-platform/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="STREAMLIT_SERVER_PORT=8501"
+Environment="STREAMLIT_SERVER_ADDRESS=0.0.0.0"
+Environment="STREAMLIT_BROWSER_GATHER_USAGE_STATS=false"
+EnvironmentFile=/opt/enterprise-ai-platform/.env
+
+ExecStart=/opt/enterprise-ai-platform/.venv/bin/streamlit run \
+    src/presentation/web/Home.py \
+    --server.port 8501 \
+    --server.address 0.0.0.0 \
+    --server.headless true \
+    --server.fileWatcherType none \
+    --browser.gatherUsageStats false \
+    --logger.level info
+
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+
+# Security hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/enterprise-ai-platform/data
+ReadOnlyPaths=/opt/enterprise-ai-platform/src
+
+# Resource limits
+LimitNOFILE=65536
+MemoryMax=4G
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=aiplatform-frontend
+
+[Install]
+WantedBy=multi-user.target

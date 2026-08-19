@@ -1,0 +1,5 @@
+Application logs directory.
+- app.log       : Main application log
+- error.log     : Error logs only
+- access.log    : HTTP access logs
+- structured.log: JSON structured logs

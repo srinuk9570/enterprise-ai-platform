@@ -1,0 +1,25 @@
+# Version constraints for dependency resolution
+# This file ensures consistent versions across all environments
+
+# Pinned versions for critical dependencies
+fastapi==0.109.0
+pydantic==2.5.3
+sqlalchemy==2.0.25
+streamlit==1.31.0
+
+# Version ranges for compatibility
+numpy>=1.26.0,<1.27.0
+pandas>=2.2.0,<2.3.0
+matplotlib>=3.8.0,<3.9.0
+
+# Avoid conflicting versions
+urllib3>=1.26.0,<2.0.0
+requests>=2.31.0,<3.0.0
+certifi>=2023.0.0
+
+# Security-related constraints
+cryptography>=41.0.7
+pyOpenSSL>=23.0.0
+
+# Python version constraint
+python_requires>=3.10

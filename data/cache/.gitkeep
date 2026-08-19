@@ -1,0 +1,4 @@
+Cache directory for temporary files.
+- redis/     : Redis dump files (if using Redis locally)
+- memory/    : Memory cache dumps
+- responses/ : Cached LLM responses

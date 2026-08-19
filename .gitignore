@@ -1,0 +1,151 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ============================================
+# Virtual Environment
+# ============================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+pythonenv*
+
+# ============================================
+# IDE
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.code-workspace
+
+# ============================================
+# Environment
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# ============================================
+# Data
+# ============================================
+data/database/*.db
+data/database/*.db-shm
+data/database/*.db-wal
+data/vector_store/*
+data/uploads/*
+data/generated/images/*
+data/generated/charts/*
+data/logs/*.log
+data/logs/*.log.*
+data/cache/*
+data/sessions/*
+data/exports/*
+data/backups/*
+
+# Keep directory structure
+!data/**/.gitkeep
+
+# ============================================
+# Models (large files)
+# ============================================
+models/
+ollama_models/
+*.bin
+*.safetensors
+*.gguf
+
+# ============================================
+# Jupyter
+# ============================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================
+# Docker
+# ============================================
+docker-compose.override.yml
+*.dockerignore
+
+# ============================================
+# Documentation
+# ============================================
+docs/_build/
+docs/site/
+site/
+
+# ============================================
+# Secrets
+# ============================================
+*.pem
+*.key
+*.crt
+*.p12
+secrets/

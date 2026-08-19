@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d2ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#logoGradient)" stroke-width="4" filter="url(#glow)"/>
+  
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="url(#innerGradient)" stroke-width="2" opacity="0.6"/>
+  
+  <!-- AI Brain / Circuit icon -->
+  <path d="M70 80 Q70 60 90 55 Q110 50 120 65 Q130 80 120 95 Q110 110 95 105 Q80 100 75 90 Z" 
+        fill="none" stroke="url(#logoGradient)" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Neural connections -->
+  <circle cx="85" cy="75" r="4" fill="#00d2ff" filter="url(#glow)"/>
+  <circle cx="115" cy="75" r="4" fill="#7c3aed" filter="url(#glow)"/>
+  <circle cx="100" cy="95" r="4" fill="#00d2ff" filter="url(#glow)"/>
+  
+  <!-- Connection lines -->
+  <line x1="85" y1="75" x2="115" y2="75" stroke="#00d2ff" stroke-width="2" opacity="0.5"/>
+  <line x1="85" y1="75" x2="100" y2="95" stroke="#7c3aed" stroke-width="2" opacity="0.5"/>
+  <line x1="115" y1="75" x2="100" y2="95" stroke="#00d2ff" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Orbiting dots -->
+  <circle cx="100" cy="25" r="3" fill="#00d2ff" opacity="0.8"/>
+  <circle cx="158" cy="65" r="3" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="158" cy="135" r="3" fill="#00d2ff" opacity="0.4"/>
+  <circle cx="100" cy="175" r="3" fill="#7c3aed" opacity="0.7"/>
+  <circle cx="42" cy="135" r="3" fill="#00d2ff" opacity="0.5"/>
+  <circle cx="42" cy="65" r="3" fill="#7c3aed" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="100" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="url(#logoGradient)" filter="url(#glow)">AI</text>
+</svg>

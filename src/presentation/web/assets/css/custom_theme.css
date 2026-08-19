@@ -1,0 +1,883 @@
+/* ============================================
+   Enterprise AI Platform - Custom Theme
+   Dark Mode Professional Theme
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ==================== CSS Variables ==================== */
+:root {
+    /* Primary Colors */
+    --primary: #00d2ff;
+    --primary-dark: #00b8e6;
+    --primary-light: #33ddff;
+    --primary-glow: rgba(0, 210, 255, 0.2);
+    
+    /* Secondary Colors */
+    --secondary: #7c3aed;
+    --secondary-dark: #6d28d9;
+    --secondary-light: #8b5cf6;
+    
+    /* Accent Colors */
+    --accent-success: #10b981;
+    --accent-warning: #f59e0b;
+    --accent-error: #ef4444;
+    --accent-info: #3b82f6;
+    
+    /* Background Colors */
+    --bg-primary: #0e1117;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #2d2d44;
+    --bg-card: #1e1e30;
+    --bg-sidebar: #13111c;
+    --bg-input: #1a1a2e;
+    --bg-hover: #2a2a40;
+    
+    /* Border Colors */
+    --border-primary: #3d3d5c;
+    --border-secondary: #2d2d44;
+    --border-light: #4a4a6a;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    --text-muted: #6b6b80;
+    --text-inverse: #000000;
+    
+    /* Font Families */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px var(--primary-glow);
+    
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
+    
+    /* Z-Index Layers */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal: 400;
+    --z-popover: 500;
+    --z-tooltip: 600;
+    --z-toast: 700;
+}
+
+/* ==================== Base Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== Typography ==================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+code, pre {
+    font-family: var(--font-mono);
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+code {
+    padding: 2px 6px;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+pre {
+    padding: var(--spacing-md);
+    overflow-x: auto;
+    border: 1px solid var(--border-primary);
+}
+
+/* ==================== Streamlit Overrides ==================== */
+
+/* Main Container */
+.main .block-container {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    max-width: 1400px;
+}
+
+/* Sidebar */
+.css-1d391kg, .css-1cypcdb {
+    background-color: var(--bg-sidebar) !important;
+}
+
+.sidebar .sidebar-content {
+    background-color: var(--bg-sidebar);
+}
+
+/* Sidebar Header */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: var(--text-primary) !important;
+}
+
+/* Buttons */
+.stButton > button {
+    font-family: var(--font-sans) !important;
+    font-weight: 500 !important;
+    border-radius: var(--radius-md) !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    transition: all var(--transition-base) !important;
+    cursor: pointer !important;
+    background-color: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-md) !important;
+    background-color: var(--bg-hover) !important;
+    border-color: var(--primary) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Primary Button */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    color: var(--text-inverse) !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%) !important;
+    box-shadow: var(--shadow-glow) !important;
+}
+
+/* Secondary Button */
+.stButton > button[kind="secondary"] {
+    background-color: transparent !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+/* Chat Messages */
+.stChatMessage {
+    border-radius: var(--radius-lg) !important;
+    padding: var(--spacing-md) !important;
+    margin: var(--spacing-sm) 0 !important;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.stChatMessage[data-testid="chat-message-user"] {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%) !important;
+    border: 1px solid var(--border-primary) !important;
+    margin-left: auto !important;
+    max-width: 85% !important;
+}
+
+.stChatMessage[data-testid="chat-message-assistant"] {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-secondary) !important;
+    max-width: 85% !important;
+}
+
+/* Chat Input */
+.stChatInput textarea {
+    border-radius: var(--radius-full) !important;
+    background-color: var(--bg-input) !important;
+    border: 2px solid var(--border-primary) !important;
+    color: var(--text-primary) !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    font-size: 1rem !important;
+    transition: border-color var(--transition-base) !important;
+}
+
+.stChatInput textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: var(--shadow-glow) !important;
+    outline: none !important;
+}
+
+.stChatInput textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div,
+.stNumberInput > div > div > input {
+    background-color: var(--bg-input) !important;
+    border: 1px solid var(--border-primary) !important;
+    border-radius: var(--radius-md) !important;
+    color: var(--text-primary) !important;
+    font-size: 0.95rem !important;
+    transition: all var(--transition-base) !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus,
+.stSelectbox > div > div:focus-within,
+.stNumberInput > div > div > input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px var(--primary-glow) !important;
+    outline: none !important;
+}
+
+/* Select Box */
+.stSelectbox > div > div > div {
+    color: var(--text-primary) !important;
+}
+
+/* Sliders */
+.stSlider > div > div > div > div {
+    background-color: var(--primary) !important;
+}
+
+.stSlider [data-baseweb="slider"] {
+    margin-top: var(--spacing-sm) !important;
+}
+
+/* Metrics */
+.stMetric {
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--spacing-lg) !important;
+    border: 1px solid var(--border-primary) !important;
+    transition: all var(--transition-base) !important;
+}
+
+.stMetric:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--primary) !important;
+}
+
+.stMetric label {
+    color: var(--text-secondary) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.stMetric [data-testid="metric-value"] {
+    color: var(--primary) !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.stMetric [data-testid="metric-delta"] {
+    color: var(--accent-success) !important;
+}
+
+/* Dataframe */
+.stDataFrame {
+    border-radius: var(--radius-md) !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+.stDataFrame thead tr th {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    padding: var(--spacing-md) !important;
+    border-bottom: 2px solid var(--border-primary) !important;
+}
+
+.stDataFrame tbody tr:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.stDataFrame tbody tr td {
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    border-bottom: 1px solid var(--border-secondary) !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: var(--spacing-xs) !important;
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--border-primary) !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    background-color: transparent !important;
+    color: var(--text-secondary) !important;
+    font-weight: 500 !important;
+    border: none !important;
+    transition: all var(--transition-base) !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: var(--text-primary) !important;
+    background-color: var(--bg-hover) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    color: var(--text-inverse) !important;
+    font-weight: 600 !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color: var(--bg-tertiary) !important;
+    border-radius: var(--radius-md) !important;
+    border: 1px solid var(--border-primary) !important;
+    font-weight: 500 !important;
+    transition: all var(--transition-base) !important;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: var(--bg-hover) !important;
+    border-color: var(--primary) !important;
+}
+
+.streamlit-expanderContent {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-primary) !important;
+    border-top: none !important;
+    border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+}
+
+/* Progress Bar */
+.stProgress > div > div > div > div {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%) !important;
+    border-radius: var(--radius-full) !important;
+}
+
+.stProgress > div > div {
+    background-color: var(--bg-tertiary) !important;
+    border-radius: var(--radius-full) !important;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-color: var(--primary) transparent transparent transparent !important;
+}
+
+/* Alerts / Messages */
+.stSuccess, .stError, .stWarning, .stInfo {
+    border-radius: var(--radius-md) !important;
+    padding: var(--spacing-md) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    animation: slideIn 0.3s ease-out;
+}
+
+.stSuccess {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+    border-color: var(--accent-success) !important;
+}
+
+.stError {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    border-color: var(--accent-error) !important;
+}
+
+.stWarning {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+    border-color: var(--accent-warning) !important;
+}
+
+.stInfo {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    border-color: var(--accent-info) !important;
+}
+
+/* Radio & Checkbox */
+.stRadio > div,
+.stCheckbox > div {
+    gap: var(--spacing-sm) !important;
+}
+
+.stRadio label,
+.stCheckbox label {
+    color: var(--text-primary) !important;
+}
+
+.stCheckbox [data-baseweb="checkbox"] {
+    background-color: var(--bg-input) !important;
+    border-color: var(--border-primary) !important;
+}
+
+.stCheckbox [data-baseweb="checkbox"]:checked {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Date Input */
+.stDateInput > div > div > input {
+    background-color: var(--bg-input) !important;
+    border-color: var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* File Uploader */
+.stFileUploader > div {
+    border: 2px dashed var(--border-primary) !important;
+    border-radius: var(--radius-lg) !important;
+    background-color: var(--bg-secondary) !important;
+    transition: all var(--transition-base) !important;
+}
+
+.stFileUploader > div:hover {
+    border-color: var(--primary) !important;
+    background-color: var(--bg-hover) !important;
+}
+
+/* Cards / Containers */
+div[data-testid="stVerticalBlock"] > div[style*="background-color"] {
+    background-color: var(--bg-card) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--border-primary) !important;
+}
+
+/* ==================== Custom Components ==================== */
+
+/* Logo */
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+}
+
+.app-logo-icon {
+    font-size: 2rem;
+}
+
+.app-logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation Items */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--text-inverse);
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-inverse);
+}
+
+.user-avatar-large {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+}
+
+/* Model Tag */
+.model-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--border-primary);
+}
+
+.model-tag.primary {
+    background-color: var(--primary-glow);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    margin-right: var(--spacing-xs);
+}
+
+.status-indicator.online {
+    background-color: var(--accent-success);
+    box-shadow: 0 0 8px var(--accent-success);
+}
+
+.status-indicator.offline {
+    background-color: var(--text-muted);
+}
+
+.status-indicator.busy {
+    background-color: var(--accent-warning);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: var(--z-tooltip);
+    border: 1px solid var(--border-primary);
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-primary), transparent);
+    margin: var(--spacing-md) 0;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 var(--spacing-xs);
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    color: var(--text-inverse);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge.secondary {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.badge.success {
+    background-color: var(--accent-success);
+}
+
+.badge.warning {
+    background-color: var(--accent-warning);
+}
+
+.badge.error {
+    background-color: var(--accent-error);
+}
+
+/* ==================== Animations ==================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Skeleton Loader */
+.skeleton {
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-hover) 50%, var(--bg-tertiary) 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: var(--radius-sm);
+}
+
+.skeleton-text {
+    height: 16px;
+    margin: var(--spacing-sm) 0;
+}
+
+.skeleton-title {
+    height: 24px;
+    width: 60%;
+    margin: var(--spacing-md) 0;
+}
+
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+}
+
+.skeleton-card {
+    height: 120px;
+    border-radius: var(--radius-md);
+}
+
+/* ==================== Scrollbar ==================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-primary);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* ==================== Responsive ==================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .stMetric [data-testid="metric-value"] {
+        font-size: 1.5rem !important;
+    }
+    
+    .stChatMessage {
+        max-width: 95% !important;
+    }
+    
+    .main .block-container {
+        padding: var(--spacing-md) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    .stButton > button {
+        width: 100% !important;
+    }
+}
+
+/* ==================== Print Styles ==================== */
+
+@media print {
+    .stSidebar,
+    .stButton,
+    .stChatInput {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    
+    .stChatMessage {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+/* ==================== Accessibility ==================== */
+
+/* Focus visible */
+*:focus-visible {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #00ffff;
+        --border-primary: #ffffff;
+        --text-secondary: #ffffff;
+    }
+}

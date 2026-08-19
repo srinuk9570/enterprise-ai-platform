@@ -1,0 +1,4 @@
+Vector store directory for ChromaDB embeddings.
+Contains:
+- chroma.sqlite3 : ChromaDB metadata database
+- embeddings/    : Vector embedding files
